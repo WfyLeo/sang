@@ -1,6 +1,7 @@
 package login
 
 import (
+	"newGoSang/db"
 	"newGoSang/net"
 	"newGoSang/server/login/controller"
 )
@@ -8,6 +9,8 @@ import (
 var Router = net.NewRouter()
 
 func Init() {
+	//测试数据库，并初始化
+	db.TestDB()
 	//还有别的初始化方法
 	initRouter()
 }
